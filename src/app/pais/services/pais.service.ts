@@ -28,6 +28,12 @@ private apiUrl: string = 'https://restcountries.com/v2';
     return this.http.get<Country[]>( url )
   }
 
+  buscarRegion(termino:string): Observable<Country[]>{
+    const url = `${ this.apiUrl }/region/${ termino }`
+    return this.http.get<Country[]>(url)
+
+  }
+
 
 
 }
